@@ -1,5 +1,6 @@
 package com.cashback.core.steps;
 
+import com.business.model.BusinessOwner;
 import com.cashback.core.ScenarioContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -15,6 +16,7 @@ public class BusinessOwnerSteps {
     @Given("I am a business owner")
     public void i_am_a_business_owner() {
         BusinessOwner businessOwner = new BusinessOwner();
+        businessOwner.getId();
         scenarioContext.setTestData("bo", businessOwner);
     }
 
